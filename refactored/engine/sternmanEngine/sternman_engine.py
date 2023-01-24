@@ -1,10 +1,8 @@
 from engine import Engine
 
-class WilloughbyEngine(Engine):
-  def __init__(self, last_service_date, current_mileage, last_service_mileage):
-    self._last_service_date = last_service_date
-    self._current_mileage = current_mileage
-    self._last_service_mileage = last_service_mileage
-
+class SternmanEngine(Engine):
+  def __init__(self, warning_light_is_on):
+    self._warning_light_is_on = warning_light_is_on
+  
   def needs_service(self):
-    return self._current_mileage - self._last_service_mileage > 60000
+    return self._warning_light_is_on
