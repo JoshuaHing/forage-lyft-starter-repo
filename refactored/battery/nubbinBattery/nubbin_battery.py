@@ -1,7 +1,7 @@
 from battery import Battery
 from utils import add_years_to_date
 
-class SpindlerBattery(Battery):
+class NubbinBattery(Battery):
   def __init__(self, last_service_date, current_date):
     self._last_service_date = last_service_date
     self._current_date = current_date
