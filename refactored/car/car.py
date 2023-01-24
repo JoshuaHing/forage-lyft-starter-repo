@@ -14,5 +14,5 @@ class Car(Serviceable):
 
   # either engine or battery needs service..
   def needs_service(self):
-    pass
+    return self.engine.needs_service() or self.battery.needs_service()
   
